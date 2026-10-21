@@ -117,3 +117,29 @@ DB_NAME=belajar_vibe_coding
     }
   }
   ```
+
+### 3. Registrasi User Baru
+- **URL:** `POST /api/users`
+- **Deskripsi:** Mendaftarkan pengguna baru dengan password yang otomatis di-hash menggunakan bcrypt.
+- **Headers:** `Content-Type: application/json`
+- **Request Body:**
+  ```json
+  {
+    "name": "Eko",
+    "email": "eko@localhost",
+    "password": "rahasia"
+  }
+  ```
+- **Respons Sukses (`200 OK`):**
+  ```json
+  {
+    "data": "OK"
+  }
+  ```
+- **Respons Gagal (`400 Bad Request`):**
+  ```json
+  {
+    "error": "Email sudah terdaftar"
+  }
+  ```
+

@@ -1,5 +1,6 @@
 import { Elysia } from "elysia";
 import { checkDbConnection } from "./db";
+import { userRoutes } from "./routes/user-routes";
 
 const port = Number(process.env.PORT) || 3000;
 
@@ -13,6 +14,7 @@ export const app = new Elysia()
     status: "ok",
     endpoints: {
       health: "/health",
+      register: "POST /api/users",
     },
   }))
   .get("/health", async ({ set }) => {
@@ -34,6 +36,7 @@ export const app = new Elysia()
       },
     };
   })
+  .use(userRoutes)
   .listen(port);
 
 console.log(

@@ -8,6 +8,13 @@
       "when": 1792586482105,
       "tag": "0000_brown_chronomancer",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1792589225014,
+      "tag": "0001_talented_the_enforcers",
+      "breakpoints": true
     }
   ]
 }
